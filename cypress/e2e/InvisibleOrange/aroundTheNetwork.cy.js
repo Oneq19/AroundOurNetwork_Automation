@@ -15,9 +15,9 @@ describe('Check the contents in the aound the networks section ', () => {
 		cy.get(".w-around-our-network .card-row").should('be.visible').then($card => {
 		    if ($card.find(".card").length > 0) {   
 		    	console.log($card[0])
-		    	assert.isOk('everything','everything is OK')
+		    	assert.isOk('Images','Images has been loaded')
 		    } else {
-		       assert.isNotOk('everything', 'this will fail')
+		       assert.isNotOk('Images', 'Loding Image Failed')
 		    }
 		})
 
@@ -30,7 +30,8 @@ describe('Check the contents in the aound the networks section ', () => {
 		})
 
 	 	//Check if the Images have width. Otherwise we can come to conclusion that the images didn't load
-	    cy.get('.w-around-our-network .card-row .card a img').should('be.visible').then(($img) => {
+	    cy.wait(2000)
+		cy.get('.w-around-our-network .card-row .card a img').should('be.visible').then(($img) => {
 	  	    cy.wrap($img[0]).should('have.prop', 'naturalWidth')
 		});
 
