@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
-describe('Check the contents in the aound the networks section ', () => {
+describe('Check the contents in the around our networks section ', () => {
 
-	it.only('Check content', ()=> {
+	it('Check image contents', ()=> {
         //Visit the website
 		cy.visit('https://www.invisibleoranges.com/grindcore-2023-q1/')
 

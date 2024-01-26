@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
-describe('Check the contents in the aound the networks section ', () => {
+describe('Check the contents in the around the networks section ', () => {
 
-	it.only('Check content', ()=> {
+	it('Check content', ()=> {
 		cy.visit('https://demo.pubportal.io/')
 		//cy.get('.module-header').should('have.text', "Read More")
 		cy.get('.module-header').contains('Around The Network ').should('exist')
